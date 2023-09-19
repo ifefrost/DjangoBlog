@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block layout %}
+
+<div class="mx-auto grid md:grid-cols-3 gap-3 max-w-7xl my-6 px-3">
+  <main class="flex flex-col items-center md:col-span-2 gap-2">
+    {% block content %} {% endblock %}
+  </main>
+  {% include 'includes/sidebar.html' %}
+</div>
+
+{% endblock %}

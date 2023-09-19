@@ -1,0 +1,27 @@
+{% extends 'layouts/blog.html' %} {% block content %}
+<div class="flex flex-col">
+  <h2 class="text-gray-900 font-bold text-xl mb-2">New Post</h2>
+  <div class="border border-gray-200 w-full bg-white rounded-xl p-4 flex flex-col justify-between leading-normal">
+    <form method="post" class="grid grid-rows-4 gap-2">
+      <p>
+        <label>Image:</label>
+        <input required="" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+      </p>
+      <p>
+        <label for="id_title">Title:</label>
+        <input required="" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+      </p>
+      <p>
+        <label for="id_body">Body:</label>
+        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-green-500 focus:border-green-500" placeholder="Write your blog here..."></textarea>
+        <!-- <input required="" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" /> -->
+      </p>
+      <p>
+        <button type="submit" class="bg-lime-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit Post</button>
+        <a href="" class="inline-block align-baseline font-bold text-sm text-lime-700 hover:text-green-900">Cancel</a>
+      </p>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

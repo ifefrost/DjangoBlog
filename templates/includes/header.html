@@ -1,0 +1,26 @@
+<header
+  class="text-white font-semibold bg-gradient-to-r from-green-900 to-lime-800"
+>
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+    <div class="flex">
+      <a href="#" class="p-1.5 text-2xl text-lime-100">FrostBlog</a>
+    </div>
+    <div class="flex justify-between">
+      <a
+        href="{% url 'home' %}"
+        class="mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-lime-100 hover:bg-lime-200 hover:text-green-900"
+        >Home</a
+      >
+      <a
+        href="{% url 'new_post' %}"
+        class="mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-lime-100 hover:bg-lime-200 hover:text-green-900"
+        >Create Post</a
+      >
+      <a
+        href="#"
+        class="mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-lime-100 hover:bg-lime-200 hover:text-green-900"
+        >Account</a
+      >
+    </div>
+  </nav>
+</header>

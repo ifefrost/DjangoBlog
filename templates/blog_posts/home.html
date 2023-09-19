@@ -1,0 +1,51 @@
+{% extends 'layouts/blog.html' %} {% block content %}
+
+{% for post in posts %}
+<article class="max-w-md w-full lg:max-w-full lg:flex">
+  <img
+    src="{{ post.image }}"
+    alt=""
+    class="w-full h-48 object-cover lg:h-auto lg:w-48 flex-none bg-cover rounded-t-xl lg:rounded-r-none lg:rounded-l-xl text-center overflow-hidden"
+  />
+  <div
+    class="border border-t-0 border-gray-200 w-full lg:border-l-0 lg:border-t lg:border-gray-200 bg-white rounded-b-xl lg:rounded-b-none lg:rounded-r-xl p-4 flex flex-col justify-between leading-normal"
+  >
+    <div class="mb-8">
+      <h4 class="text-gray-900 font-bold text-xl mb-2">
+        {{ post.title }}
+      </h4>
+      <p class="text-gray-700 text-base">
+        {{ post.body|truncatechars:150 }}
+      </p>
+    </div>
+    <div class="flex items-center">
+      <div class="h-10 w-10 rounded-full mr-4 p-2 bg-lime-500">
+        {% include "avatar.svg" %}
+      </div>
+      <div class="text-sm">
+        <p class="text-gray-900 leading-none">Jane Doe</p>
+        <p class="text-gray-600">August 27, 2018</p>
+      </div>
+      <div class="flex ml-3">
+        <a
+          href="#"
+          class="mx-1 block rounded-xl px-3 py-2 text-sm bg-gray-200 hover:bg-lime-200 hover:text-green-900"
+          >Life</a
+        >
+        <a
+          href="#"
+          class="mx-1 block rounded-xl px-3 py-2 text-sm bg-gray-200 hover:bg-lime-200 hover:text-green-900"
+          >Happiness</a
+        >
+        <a
+          href="#"
+          class="mx-1 block rounded-xl px-3 py-2 text-sm bg-gray-200 hover:bg-lime-200 hover:text-green-900"
+          >Women</a
+        >
+      </div>
+    </div>
+  </div>
+</article>
+{% endfor %}
+
+{% endblock %}
